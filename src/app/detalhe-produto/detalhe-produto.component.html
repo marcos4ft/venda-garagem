@@ -1,0 +1,10 @@
+<div style="margin-top: 100px;text-align: center;">
+  <h3>{{produto?.nome}}</h3>
+</div>
+<main role="main" id="main">
+<div class="row" *ngFor="let foto of produto?.fotos" style="margin-bottom: 25px;">
+  <img src="{{foto}}" alt="" >
+</div>
+<div  style="margin-top: 20px;text-align: center;margin-bottom: 20px;">
+  <a  [routerLink]="['']">VOLTAR</a>
+</div>

@@ -32,8 +32,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    RouterModule.forRoot(ROUTES,{ scrollPositionRestoration: 'enabled' })
+    RouterModule.forRoot(ROUTES,{ scrollPositionRestoration: 'disabled' })
   ],
+  exports: [RouterModule],
   providers: [
 
   ],

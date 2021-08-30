@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Produto } from 'src/models/produto.model';
 import { PRODUTOS } from '../produtos';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-detalhe-produto',
@@ -16,7 +17,7 @@ export class DetalheProdutoComponent implements OnInit {
   produto?:Produto;
   fotoAtual?:string;
 
-  constructor(private route:ActivatedRoute,private config: NgbCarouselConfig) {
+  constructor(private route:ActivatedRoute,private config: NgbCarouselConfig,private _location: Location) {
 
     config.interval = 2000;
     config.keyboard = true;
@@ -34,6 +35,10 @@ export class DetalheProdutoComponent implements OnInit {
   exibe(foto:string):void{
     console.log(foto);
     this.fotoAtual = foto;
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
 }

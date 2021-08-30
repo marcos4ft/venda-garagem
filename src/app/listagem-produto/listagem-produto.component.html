@@ -29,9 +29,9 @@
 
       <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
           <div class="col" *ngFor="let produto of produtos | selectCategoria:categoria | selectEstado:estado">
-              <div class="card h-100 shadow-sm"> <img src="{{produto?.foto}}" class="card-img-top" alt="...">
+              <div class="card h-100 shadow-sm"> <img src="{{produto?.foto}}" onerror="this.src='https://www.allianceplast.com/wp-content/uploads/no-image.png'" class="card-img-top" alt="...">
                   <div class="card-body">
-                      <div class="clearfix mb-3" style="margin-bottom:0px!important"> {{produto?.nome}}<span class="float-end price-hp">{{produto?.preco}}</span> </div>
+                      <div class="clearfix mb-3" style="margin-bottom:0px!important;font-weight: 800;"> {{produto?.nome}}<span class="float-end price-hp">{{produto?.preco}}</span> </div>
 
                       <small
                       [ngClass]="{
